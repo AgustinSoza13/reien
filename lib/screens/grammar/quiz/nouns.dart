@@ -1,34 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
-class QuizTenses extends StatefulWidget {
-  const QuizTenses({super.key});
+class QuizNouns extends StatefulWidget {
+  const QuizNouns({super.key});
 
   @override
-  State<QuizTenses> createState() => _QuizTensesState();
+  State<QuizNouns> createState() => _QuizTensesState();
 }
 
-class _QuizTensesState extends State<QuizTenses> {
+class _QuizTensesState extends State<QuizNouns> {
   var _questionIndex = 0;
   var _totalScore = 0;
 
   final List<Map<String, Object>> _questions = [
     {
-      'questionText': 'Water ___ of hydrogen and oxygen.',
+      'questionText':
+          'In object-oriented programming, a ____ is a blueprint for creating objects, providing initial values and behaviors.',
       'answers': [
-        {'text': 'consist', 'score': -1},
-        {'text': 'has consisted', 'score': -1},
-        {'text': 'is consisting', 'score': -1},
-        {'text': 'consists', 'score': 2},
+        {'text': 'Class', 'score': 2},
+        {'text': 'Function', 'score': -1},
+        {'text': 'Interface', 'score': -1},
+        {'text': 'Method', 'score': -1},
       ],
     },
     {
-      'questionText': 'I ___ five courses this semester.',
+      'questionText':
+          'When optimizing database performance, denormalization involves reducing the number of _____ in a relational database to improve query speed.',
       'answers': [
-        {'text': 'taken', 'score': -1},
-        {'text': 'am took', 'score': -1},
-        {'text': 'am taking', 'score': 2},
-        {'text': 'takes', 'score': -1},
+        {'text': 'Joins', 'score': 2},
+        {'text': 'Indexes', 'score': -1},
+        {'text': 'Triggers', 'score': -1},
+        {'text': 'Views', 'score': -1},
+      ],
+    },
+    {
+      'questionText':
+          'The term "Big ____" refers to the processing and analysis of large and complex datasets that traditional data processing applications cannot handle efficiently.',
+      'answers': [
+        {'text': 'Data', 'score': 2},
+        {'text': 'Bytes', 'score': -1},
+        {'text': 'Queries', 'score': -1},
+        {'text': 'Tables', 'score': -1},
+      ],
+    },
+    {
+      'questionText':
+          'To enhance the security of password storage, it is recommended to use a strong ____ function that transforms the password into a fixed-length string of characters.',
+      'answers': [
+        {'text': 'Hashing', 'score': 2},
+        {'text': 'Salting', 'score': -1},
+        {'text': 'Encryption', 'score': -1},
+        {'text': 'Decryption', 'score': -1},
+      ],
+    },
+    {
+      'questionText':
+          'The ____ key is a unique identifier for a record in a database table and is often used to establish relationships between tables.',
+      'answers': [
+        {'text': 'Primary', 'score': 2},
+        {'text': 'Foreign', 'score': -1},
+        {'text': 'Composite', 'score': -1},
+        {'text': 'Super', 'score': -1},
       ],
     },
   ];
